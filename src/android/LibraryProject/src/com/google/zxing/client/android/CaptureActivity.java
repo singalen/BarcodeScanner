@@ -210,7 +210,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
       String action = intent.getAction();
       String dataString = intent.getDataString();
 
-      if (Intents.Scan.ACTION.equals(action)) {
+      if ("com.phonegap.plugins.barcodescanner.SCAN".equals(action)) {
 
         // Scan the formats the intent requested, and return the result to the calling activity.
         source = IntentSource.NATIVE_APP_INTENT;
