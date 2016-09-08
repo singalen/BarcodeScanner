@@ -23,7 +23,7 @@ import org.apache.cordova.CallbackContext;
 import org.apache.cordova.PluginResult;
 import org.apache.cordova.PermissionHelper;
 
-//import com.google.zxing.client.android.Intents;
+import com.google.zxing.client.android.Intents;
 
 /**
  * This calls out to the ZXing barcode reader and returns the result.
@@ -170,17 +170,17 @@ public class BarcodeScanner extends CordovaPlugin {
                             }
                         }
 
-//                        intentScan.putExtra(Intents.Scan.CAMERA_ID, obj.optBoolean(PREFER_FRONTCAMERA, false) ? 1 : 0);
-//                        intentScan.putExtra(Intents.Scan.SHOW_FLIP_CAMERA_BUTTON, obj.optBoolean(SHOW_FLIP_CAMERA_BUTTON, false));
-//                        if (obj.has(FORMATS)) {
-//                            intentScan.putExtra(Intents.Scan.FORMATS, obj.optString(FORMATS));
-//                        }
-//                        if (obj.has(PROMPT)) {
-//                            intentScan.putExtra(Intents.Scan.PROMPT_MESSAGE, obj.optString(PROMPT));
-//                        }
-//                        if (obj.has(ORIENTATION)) {
-//                            intentScan.putExtra(Intents.Scan.ORIENTATION_LOCK, obj.optString(ORIENTATION));
-//                        }
+                        //                        intentScan.putExtra(Intents.Scan.CAMERA_ID, obj.optBoolean(PREFER_FRONTCAMERA, false) ? 1 : 0);
+                        //                        intentScan.putExtra(Intents.Scan.SHOW_FLIP_CAMERA_BUTTON, obj.optBoolean(SHOW_FLIP_CAMERA_BUTTON, false));
+                        if (obj.has(FORMATS)) {
+                            intentScan.putExtra(Intents.Scan.FORMATS, obj.optString(FORMATS));
+                        }
+                        if (obj.has(PROMPT)) {
+                            intentScan.putExtra(Intents.Scan.PROMPT_MESSAGE, obj.optString(PROMPT));
+                        }
+                        //                        if (obj.has(ORIENTATION)) {
+                        //                            intentScan.putExtra(Intents.Scan.ORIENTATION_LOCK, obj.optString(ORIENTATION));
+                        //                        }
                     }
 
                 }
